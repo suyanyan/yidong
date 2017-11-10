@@ -1,11 +1,11 @@
 
 @font-face {
   font-family: 'iconfont';  /* project id 433369 */
-  src: url('https://at.alicdn.com/t/font_433369_7q5wjewe01z6w29.eot');
-  src: url('https://at.alicdn.com/t/font_433369_7q5wjewe01z6w29.eot?#iefix') format('embedded-opentype'),
-  url('https://at.alicdn.com/t/font_433369_7q5wjewe01z6w29.woff') format('woff'),
-  url('https://at.alicdn.com/t/font_433369_7q5wjewe01z6w29.ttf') format('truetype'),
-  url('https://at.alicdn.com/t/font_433369_7q5wjewe01z6w29.svg#iconfont') format('svg');
+  src: url('https://at.alicdn.com/t/font_433369_8t70owsigsexw29.eot');
+  src: url('https://at.alicdn.com/t/font_433369_8t70owsigsexw29.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_433369_8t70owsigsexw29.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_433369_8t70owsigsexw29.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_433369_8t70owsigsexw29.svg#iconfont') format('svg');
 }
 .iconfont{
 
@@ -125,9 +125,6 @@ header{
 	float: left;
 	margin-top: 10px;
 }
-/* .log-top .log-top-l .taiyuan{
-
-} */
 .log-top-l .taiyuan .taiyuan1{
 	font-size: 16px;
 	line-height: 66px;
@@ -136,6 +133,7 @@ header{
 	background-repeat: no-repeat;
 	background-position: right 30px;
 	padding: 0 15px 0 20px;
+	cursor: pointer;
 }
 .log-top .log-top-r{
 	width: 50%;
@@ -152,9 +150,10 @@ header{
 	border: 2px solid #dfdfdf;
 	padding-left: 10px;
 	color: #999;
+	outline: none;
 	
 }
-.input-bot button{
+.log-top-r .sear button{
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -167,6 +166,10 @@ header{
 	width: 85px;
 	border-radius: 3px;
 	z-index: 2;
+	outline: none;
+}
+.log-top-r .sear button:active{
+	color: #fff;
 }
 .log-top-r .hidden-sm{
 	width: 100%;
@@ -444,7 +447,9 @@ header{
 	width: 33%;
 	height: 78px;
 	float: left;
-	}
+	transition: all 1s;
+
+}
 .main-right .btns ul li:hover{
 	transform: scale(1.2);
 }
@@ -565,6 +570,7 @@ header{
 	line-height: 35px;
 	text-align: center;
 	float: left;
+	cursor: pointer;
 }
 
 
@@ -578,6 +584,7 @@ header{
 	background:#dfdfdf;
 	float: left;
 	position: relative;
+	overflow: hidden;
 }
 .chuxiao .left-page{
 	position: absolute;
@@ -608,14 +615,14 @@ header{
 
 }
 .chuxiao .chuxiao-list{
-	width: 1700px;
+	width: 1170px;
 	height: 160px;
 	overflow: hidden;
 
 }
 .chuxiao .chuxiao-list ul {
 	width: 10000px;
-	height: 180px;
+	height: 160px;
 	margin-left: -1180px;
 }
 .chuxiao .chuxiao-list ul li{
@@ -802,11 +809,11 @@ header{
 
 .gongg{
 	width: 100%;
-	height: 38px;
+	height: 40px;
 	line-height: 38px;
 	font-size: 16px;
 	border: 1px solid #dfdfdf;
-	/* background: pink; */
+	position: relative;
 	float: left;
 	margin-top: 10px;
 }
@@ -847,14 +854,30 @@ header{
 	font-size: 16px;
 	text-align: center;
 	line-height: 38px;
-	padding-right: 20px;
-	
+	position: absolute;
+	right: 20px;
+	top: 0;
 }
-.gongg .jiantou a{
+.gongg .jiantou span{
 	color: #333;
 	font-size: 18px;
+	cursor: pointer;
 }
-
+.gongg ul{
+	width: 1000px;
+	height: 37px;
+	margin: 0 auto;
+	position: relative;
+}
+.gongg ul li{
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #fff;
+}
+.gongg .actove{
+	z-index: 2;
+}
 /*  国资动态开始 */
 .china{
 	width: 100%;
@@ -864,6 +887,7 @@ header{
 	border: 1px solid #dfdfdf;
 	font-size: 14px;
 }
+
 .china .child-title{
 	font-size: 224px;
 	padding-bottom: 5px;
@@ -1018,3 +1042,45 @@ footer .foot .info-row .inf{
 	line-height: 25px;
 	background-position: 0 5px;
 }
+/* 侧边栏开始 */
+#cebianlan{
+	width: 40px;
+	height: 250px;
+	background-color: #fff;
+	position: fixed;
+	right: 0;
+	bottom: 10px;
+}
+.cebianlan1{
+	width: 40px;
+	height: 118px;
+	background-color: #ccc;
+	margin-bottom: 10px;
+	text-align: center;
+	position: relative;
+	z-index: 999;
+	
+}
+.cebianlan1 i{
+	font-size: 20px;
+	color: #337ab7;
+	line-height: 40px;
+}
+.cebianlan1 h1{
+	font-size: 12px;
+	color: #333;
+}
+#cebianlan a{
+	display: block;
+	width: 86px;
+	height: 22px;
+	position: relative;
+	top: -105px;
+	left: -20px;
+	margin-top: 8px;
+	transition: all 1s;
+}
+#cebianlan a:hover{
+	left: -86px;
+}
+/* 侧边栏结束 */

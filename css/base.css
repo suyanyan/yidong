@@ -15,4 +15,12 @@ img{
 	height: 100%;
 
 }
-
+a{
+	color: #000;
+}
+a:hover{
+	color: orange;
+}
+a:active{
+	color: #fff;
+}

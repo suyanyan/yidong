@@ -1,22 +1,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // 优惠促销开始 
 {
 	let inner=document.querySelector('.chuxiao .chuxiao-list ul');
@@ -48,13 +32,12 @@
 			inner.style.transition="none";
 		}
 	});
-
-	window.onblur=big.onmouseover=function(){
+	window.addEventListener('onblur',big.onmouseover=function(){
 		clearInterval(t);
-	};
-	window.onfocus=big.onmouseout=function(){
+	});
+	window.addEventListener('onfocus',big.onmouseout=function(){
 		t=setInterval(movefn,2000);
-	}
+	});
 	flag=true;
 	pres.onclick=function(){
 		dir='l';
@@ -198,5 +181,18 @@
 		}
 		
 	});
+
+}
+
+{
+	let pre=document.querySelector('.gongg .jiantou span:nth-child(1)');
+	let next=document.querySelector('.gongg .jiantou span:nth-child(2)')
+	let li=document.querySelectorAll('.gongg ul li');
+	li.forEach(function(val,index){
+		for(let i=0;i<li.length;i++){
+			val.classList.remove('active');
+		}
+		li[index].classList.add('active');
+	})
 
 }
